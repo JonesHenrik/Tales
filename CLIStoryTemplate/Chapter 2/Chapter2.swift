@@ -6,5 +6,5 @@
 import Foundation
 
 func chapterTwo() {
-    // Your portion of the story goes here
+     print("Then one day I decided I wanted to climb the outside of the tallest building in Detroit.")
 }
