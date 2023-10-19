@@ -5,9 +5,10 @@
 
 import Foundation
 
+let chapterTitle = "Climbing Adventure"
+
+
 func chapterThree() {
-    // Your portion of the story goes here
-    
-    print("Hello, world. This is Henrik editing stuff.")
-    print (1, 2, 3, 4, 5)
+print("Welcome to chapter 3 the \(chapterTitle)")
+print("Time for me to begin my journey!")
 }
