@@ -6,5 +6,5 @@
 import Foundation
 
 func chapterFour() {
-    // Print(Proper, Preparation, Prevents, Poor, Performance.)
+    print("Proper, Preparation, Prevents, Poor, Performance.")
 }
