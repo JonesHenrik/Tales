@@ -6,12 +6,28 @@
 
 import Foundation
 
+struct Chacracter {
+    var name: String
+    var age: Int
+    var catchphrase: String
+
+}
+
+enum building {
+    case house, highrise, skyscraper
+}
+
+var catchphrases: [String] = ["example", "example2", "example3"]
+
+
+let name = readLine()
+
+
 func chapterOne() {
     // Your portion of the story goes here
     print("What is the name of the main character in this story?")
     
-    let name = readLine()
-    
+
     var ready: Bool = false
     
     while !ready {
