@@ -7,11 +7,6 @@ import Foundation
 
 func chapterTwo() {
     
-    var name = ""
-    
-    func chapterTwo() {
-        var name = "" // Initialize name
-        
         // Define an array of climbing materials and their prices
         let climbingMaterials = [
             ("Climbing Rope", 150),
@@ -32,8 +27,10 @@ func chapterTwo() {
             totalCost += price
         }
         
-        if !name.isEmpty {
-            print("""
+        if let name = name {
+            if !name.isEmpty {
+            
+                print("""
             Chapter 2: Preparing for a New Adventure
             
             After deciding it's time for a change, \(name) begins researching their new hobby - climbing buildings. Excitement builds as they think about the thrill of scaling skyscrapers and exploring new heights.
@@ -41,12 +38,13 @@ func chapterTwo() {
             To embark on this adventure, \(name) starts by gathering the necessary climbing gear. Here's a list of materials and their prices:
             
             """)
+                
+                for (material, price) in climbingMaterials {
+                    print("\(material) - $\(price)")
+                }
+                
+                print("""
             
-            for (material, price) in climbingMaterials {
-                print("\(material) - $\(price)")
-            }
-            
-            print("""
             The total cost of all these materials is $\(totalCost). \(name) realizes that investing in high-quality gear is crucial for safety while climbing.
             
             They start shopping for these items, comparing prices, and reading reviews to ensure they get the best equipment.
@@ -57,6 +55,6 @@ func chapterTwo() {
             
             *End of Chapter 2*
             """)
+            }
         }
-    }
 }
