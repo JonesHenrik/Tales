@@ -51,6 +51,27 @@ func chapterTwo() {
 
         for gear in climbingGear {
             print(gear)
+
+    
+        // Define an array of climbing materials and their prices
+        let climbingMaterials = [
+            ("Climbing Rope", 150),
+            ("Harness", 80),
+            ("Carabiners", 20),
+            ("Climbing Shoes", 120),
+            ("Chalk Bag", 15),
+            ("Helmet", 50),
+            ("Quickdraws", 10),
+            ("Belay Device", 30),
+            ("Crash Pad", 200),
+            ("Gloves", 25)
+        ]
+        
+        // Calculate the total cost
+        var totalCost = 0
+        for (_, price) in climbingMaterials {
+            totalCost += price
+
         }
 
         print("""
@@ -63,7 +84,7 @@ func chapterTwo() {
         My climbing experience begins with a grade of \(progress.climbingGrade) and \(progress.climbingExperience) climbing experience. Little by little, I feel more prepared for my new adventure, both physically and mentally.
 
         It's becoming evident that training will be an important part of this journey. Climbers need proper training to excel and stay safe. This chapter marks the beginning of a training arc, and I'm excited to see where it will lead.
-        
+       
         The training arc begins with a commitment to becoming a skilled climber. It's not just about scaling buildings but mastering the art of climbing. I, \(name), join a local climbing club and meet a diverse group of climbers, each with their own stories and experiences.
 
                 I'll share some key moments from the training arc:
