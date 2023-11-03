@@ -5,7 +5,7 @@
 
 import Foundation
 
-func chapter4() {
+func chapterFour() {
 //    var Climber: Int
 //    func members() {
 //        print("Proper, Preparation, Prevents, Poor, Performance.")
