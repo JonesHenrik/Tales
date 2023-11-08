@@ -55,6 +55,7 @@ let riddleHints = [
     "I'm used for writing but not with paper and ink."
 ]
 
+var usedHints: [String] = []
 
 /// Contributes to the flow of the other chapter functions within readStory()
 func chapterThree() {
@@ -106,7 +107,14 @@ func chapterThree() {
                         print("That is correct! Congratulations \(name)! You may pass!")
                         riddle = true
                     case "hint", "anotherhint", "another":
-                        print("\(riddleHints.randomElement() ?? "There are no hints for you \(name)")")
+                        if let randomHint = riddleHints.randomElement() {
+                            if !usedHints.contains(randomHint) {
+                                print(randomHint)
+                                usedHints.append(randomHint)
+                            } else {
+                                print("There are no more hints for you \(name)! You must figure this out.")
+                            }
+                        }
                     default:
                         print("That is incorrect! I expected more from you \(name). You shall NOT pass!\nIf you need hints type in 'hint'. If you are still stumped you may ask for another\nBut I heard all the cool kids don't need hints.")
                     }
