@@ -18,6 +18,7 @@ var descriptions = [
 
 var trollDescription = descriptions.randomElement()
 
+// Increases type safety for instances of the Building struct
 enum Difficulty {
     case easy, medium, hard
 }
@@ -55,6 +56,7 @@ let riddleHints = [
     "I'm used for writing but not with paper and ink."
 ]
 
+// Once a value from riddle hints is used it is added to this array, preventing it to be reused.
 var usedHints: [String] = []
 
 /// Contributes to the flow of the other chapter functions within readStory()
@@ -63,7 +65,7 @@ func chapterThree() {
         if let trollDescription = trollDescription {
             
             print("\nWelcome to chapter 3 the \(chapterTitle) \(name)")
-            // Building selector
+            // Building select
             print("\nSelect a building to begin your journey:\nGuardian Building, Detroit Institute of Arts, or the Fisher Building")
             
             var ready: Bool = false
@@ -71,6 +73,7 @@ func chapterThree() {
                 let buildingSelect = readLine()
                 
                 if let userChoice = buildingSelect {
+                    // The methods applied to userChoice limits user error to spelling
                     switch userChoice.lowercased().replacingOccurrences(of: " ", with: "") {
                     case "guardianbuilding":
                         guardian.description()
@@ -82,13 +85,13 @@ func chapterThree() {
                         fisher.description()
                         ready = true
                     default:
-                        print("Error: Please make sure you don't have typos")
+                        print("Error: Please make sure you don't have any spelling mistakes")
                         
                     }
                 }
                 
             }
-            // include some filler
+            // filler
             print("You have begun your climb up the building. Your traning or lack there of will serve you well.")
             
             print("\nOh no! Your journey comes to an immediate halt by a troll! \(trollDescription) The troll demands that you leave his territory or be met with his violence. However, the troll doesn't get many visitors and has been quite lonely. He grants you passage as long as you can answer his riddle.")
